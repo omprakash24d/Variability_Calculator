@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variability Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Variability Calculator</h1>
+        </header>
+        <div id="content">
+            <p>Welcome to the Variability Calculator. This tool helps you analyze the variability of your data. First, input the number of data points, and then enter each data value one by one. Click "Start Data Entry" to begin.</p>
+
+            <label for="numDataPoints">Total Number of Observations: (e.g. 2, 3, 4, 5)</label>
+            <input type="number" id="numDataPoints" placeholder="Enter the Total number of Observations In Numeric">
+            
+            <div id="dataEntry" style="display: none;">
+                <p>Enter the Observations Value:</p>
+                <div id="dataInputs">
+                    <!-- Data value inputs will be added here dynamically -->
+                </div>
+            </div>
+
+            <button id="startDataEntry" onclick="beginDataEntry()">Start Data Entry</button>
+
+            <button id="calculateButton" style="display: none;" onclick="calculateVariability()">Calculate</button>
+
+            <div id="yourResult" style="display: none;">Your Result:</div>
+
+            <div id="results">
+                <!-- Results will be displayed here -->
+            </div>
+
+            <div id="explanation">
+                <!-- Explanation of the results will be displayed here -->
+            </div>
+
+            <div id="graphs">
+                <div class="chart-container">
+                    <canvas id="resultsChart" width="400" height="200"></canvas>
+                    <p class="chart-explanation">Bar Chart</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="lineChart" width="400" height="200"></canvas>
+                    <p class="chart-explanation">Line Chart</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="pieChart" width="400" height="200"></canvas>
+                    <p class="chart-explanation">Pie Chart</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; All Rights Reserved | Designed and Developed By Om Prakash</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+  /*===== Colores =====*/
+  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
+  /* HSL color mode */
+  --hue-color: 224;
+  --first-color: hsl(var(--hue-color), 89%, 60%);
+  --second-color: hsl(var(--hue-color), 56%, 12%);
+  /*===== Fuente y tipografia =====*/
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+  /*===== Margenes =====*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .875rem;
+  }
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  background-color: #fff;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #0074d9;
+  color: #fff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+#content {
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#dataInputs {
+  margin: 0 -5px;
+}
+
+#dataInputs input {
+  width: calc(33.33% - 10px);
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+#results {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#yourResult {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+#explanation {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#graphs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.chart-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  padding: 20px;
+}
+
+canvas {
+  margin: 10px;
+}
+/* For small screens */
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 100%;
+  }
+  #container {
+      max-width: 100%; /* Make the container full-width on smaller screens */
+  }
+#content{
+  max-width: 100%;
+}
+
+#yourResult{
+max-width: 100%;
+}
+  .chart-container{
+      max-width: 100%; /* Make the container full-width on smaller screens */   
+  }
+.chart-explanation{
+max-width: 100%;
+}
+  .footer{
+      max-width: 100%; /* Make the container full-width on smaller screens */
+  }
+#yourResult {
+  font-size: 1.3rem;
+}
+
+#results {
+  font-size: 1rem;
+}
+
+#explanation {
+  font-size: 0.9rem;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-explanation {
+  font-size: 0.9rem;
+}
+}
